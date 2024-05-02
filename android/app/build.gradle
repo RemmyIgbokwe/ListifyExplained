@@ -73,7 +73,6 @@ android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
-
     namespace "com.speachtextnotetaker"
     defaultConfig {
         applicationId "com.speachtextnotetaker"
@@ -82,6 +81,8 @@ android {
         versionCode 1
         versionName "1.0"
     }
+apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
     signingConfigs {
         debug {
             storeFile file('debug.keystore')
